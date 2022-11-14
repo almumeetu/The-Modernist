@@ -1,0 +1,35 @@
+@use "../abstract" as *;
+.services-area{
+    background: #660000;
+    & .services-item{
+        background: #fff;
+        padding: 25px 30px;
+        transition: 0.3s;
+        &:hover{
+            background: #76c38f;
+        }
+        &:hover .services-content .services-title h2{
+            color: #fff;
+        }
+        &:hover .services-content p{
+            color: #fff;
+        }
+        & .services-thumb{
+        }
+        & .services-content{
+            & .services-title{
+                & h2{
+                    font-size: 32px;
+                    color: #333333;
+                    margin-top: 18px;
+                    margin-bottom: 25px;
+                    transition: 0.3s;
+                }
+            }
+            & p{
+                color: #979797;
+                transition: 0.3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@use "../abstract" as *;
+
+.work-area {
+    background: #660000;
+
+}
+.work-title > img {
+	width: 100%;
+}
+
+.work-area {
+    & .work__item {
+        border: 5px solid #fff;
+        &:hover{
+            border: 5px solid #76c38f;
+        }
+        &:hover .work__content {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &:hover .work__thumb::after {
+            left: 10px;
+            top: -10px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &:hover .work__thumb img {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        &:hover .work__thumb::after {
+            left: 10px;
+            top: -10px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        & .work__thumb {
+            & img {
+                width: 100%;
+            }
+            overflow: hidden;
+        }
+        & .work__content {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #151515;
+
+            & .work__content-inner {
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                & h3 {
+                    font-size: 20px;
+                    font-weight: 300;
+                    color: #ffffff;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
